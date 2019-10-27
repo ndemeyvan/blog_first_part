@@ -1,0 +1,13 @@
+<%- include("partials/header"); -%>
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Bproo++ le meilleur site de tuto en ligne .</h1>
+    <p class="lead">C'est simple , il s'agit de bproo++ , mais en mieux , jettez un oeil a nos dernier tutoriel juste
+        la en bas.</p>
+</div>
+<div class="container p-4">
+    <% for (var i = 0; i < titleItem.length; i++) { %>
+    <h5 class="card-title pricing-card-title mt-3"><%= titleItem[i].title %></small></h5>
+    <p><%= titleItem[i].text.substring(0,150) %> ... <a href="/post/<%= titleItem[i].title %>">Read more</a></p>
+    <% } %>
+</div>
+<%- include("partials/footer"); -%>
